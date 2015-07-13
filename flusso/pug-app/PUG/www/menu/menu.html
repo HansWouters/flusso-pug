@@ -1,0 +1,29 @@
+<ion-side-menus enable-menu-with-back-views>
+  <!-- Main content -->
+  <ion-side-menu-content edge-drag-threshold="true">
+    <ion-nav-bar class="bar-positive"> 
+      <ion-nav-back-button class="button-clear"> 
+        <i class="ion-arrow-left-c"></i> 
+        Back 
+      </ion-nav-back-button> 
+    </ion-nav-bar>
+    <ion-nav-view name="defaultview"></ion-nav-view>
+  </ion-side-menu-content>
+  
+  <!-- Left Side Menu -->
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">PUG 2015</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close ui-sref="pug.home">Home</ion-item>
+        <ion-item nav-clear menu-close ui-sref="pug.agenda">Agenda</ion-item>
+        <ion-item nav-clear menu-close ui-sref="pug.speaker.list">Speakers</ion-item>
+        <ion-item nav-clear menu-close ui-sref="pug.sessions">Sessions</ion-item>
+        <ion-item nav-clear menu-close ui-sref="pug.settings">Settings</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

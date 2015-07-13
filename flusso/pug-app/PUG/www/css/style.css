@@ -1,0 +1,57 @@
+/* Empty. Add your own CSS if you like */
+.css-block {
+	white-space: normal;
+}
+
+.background-positive {
+	background-image: linear-gradient(225deg, #387ef5, #38b3f5);
+}
+
+.css-spinner {
+	text-align: center;
+	padding: 20px;
+}
+
+.css-list-item img {
+	border-radius: 25px;
+	height: 30px;
+	width: 30px;
+}
+
+.css-list-item {
+	display: flex;
+	align-items: center;
+}
+
+.css-list-item * {
+	margin: 3px;
+}
+
+ul.css-index-selector {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 30px;
+    height: 100%;
+    z-index: 5;
+    position: fixed;
+   	right: 0;	
+   	background-color: gray;
+}
+
+ul.css-index-selector li {
+    display: table-row;
+    text-align: center;
+}
+
+ul.css-index-selector li a {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.css-block-divider {
+	background-color: lightgreen;
+	padding: 2px 5px;
+	border: 1px solid darkgreen;
+}

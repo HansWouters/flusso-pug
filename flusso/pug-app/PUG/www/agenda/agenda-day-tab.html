@@ -1,0 +1,28 @@
+<ion-view view-title="Agenda {{ AgendaTabCtrl.day.date | date:'EEEE d MMM'}}">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header" zooming="true" direction="xy">
+    <table class="css-agenda-table">
+      <thead>
+        <tr>
+          <th/>
+          <th ng-repeat="area in AgendaTabCtrl.areas">{{ area }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat-start="time in AgendaTabCtrl.day.times">
+          <th>{{ time.time | date:'H:mm'}}</th>
+          <!-- <td>{{ time.session.length > 1 }};{{ time.session.length == 1 }}</td> -->
+          <td ng-if="time.sessions.length == 1" colspan="{{ AgendaTabCtrl.areas.length }}" ng-init="session = time.sessions[0]" class="broad-session {{ session.appointmenttype_type }}-session" ng-click="AgendaTabCtrl.openModal({{ session.sessie_id }})">
+            {{ session.sessie_subject }}
+          </td>
+          <td ng-if="time.sessions.length > 1" ng-repeat="area in AgendaTabCtrl.areas" ng-init="session = AgendaTabCtrl.getSession(time, area)" class="{{ session.appointmenttype_type }}-session" ng-click="AgendaTabCtrl.openModal({{ session.sessie_id }})">
+            {{ session.sessie_subject }}
+          </td>
+        </tr>
+        <tr ng-repeat-end ng-hide="true"></tr>
+      </tbody>
+    </table>
+  </ion-content>
+</ion-view>

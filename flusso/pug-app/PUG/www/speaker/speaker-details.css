@@ -1,0 +1,27 @@
+.speaker-details {
+	padding: 5px;
+}
+
+.speaker-details div {
+	padding: 5px;
+}
+
+.speaker-info {
+	position: relative;
+	height: 100px;
+}
+
+.speaker-info img {
+	border-radius: 40px;
+	height: 80px;
+	width: 80px;
+	
+	position: absolute;
+}
+
+.speaker-info div {
+	position: absolute;
+	margin-left: 80px;
+	padding-left: 10px;
+	line-height: 25px;
+}

@@ -1,0 +1,9 @@
+<ion-tabs class="tabs-color-active-positive" ng-style="AgendaCtrl.getScreenSize()">
+  <ion-tab title="{{ AgendaCtrl.days[0].date | date:'EEEE '}}" ui-sref="pug.agenda.day0">
+    <ion-nav-view name="agendaTabContent-0"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="{{ AgendaCtrl.days[1].date | date:'EEEE'}}" ui-sref="pug.agenda.day1">
+    <ion-nav-view name="agendaTabContent-1"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

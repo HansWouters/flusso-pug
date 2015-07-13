@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="pugDev">
+
+  <head>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="lib/angular-mocks/angular-mocks.js"></script>
+    
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="test/devPug.js"></script>
+    <script src="js/pug.js"></script>
+    <script src="js/route-config.js"></script>
+    <script src="js/dataService.js"></script>
+    <script src="js/settingService.js"></script>
+
+    <script src="utils/localstorage.js"></script>
+    <script src="utils/screenSizeService.js"></script>
+
+    <script src="menu/menuController.js"></script>
+
+    <script src="linkServices/sessionSpeakerLinkService.js"></script>
+    
+    <link href="home/home.css" rel="stylesheet">
+    <script src="home/homeController.js"></script>
+
+    <script src="userSettings/userSettingsController.js"></script>
+    <script src="userSettings/userSettingsService.js"></script>
+    
+    <link href="agenda/agenda-day-tab.css" rel="stylesheet">
+    <script src="agenda/agendaController.js"></script>
+    <script src="agenda/agendaTabController.js"></script>
+    <script src="agenda/agendaService.js"></script>
+
+    <link href="session/session.css" rel="stylesheet">
+    <link href="session/session-details-modal.css" rel="stylesheet">
+    <script src="session/sessionListController.js"></script>
+    <script src="session/sessionDetailsModalController.js"></script>
+    <script src="session/sessionService.js"></script>
+    <script src="session/sessionDetailsModalService.js"></script>
+    
+    <link href="speaker/speaker-details.css" rel="stylesheet">
+    <script src="speaker/speakerListController.js"></script>
+    <script src="speaker/speakerController.js"></script>
+    <script src="speaker/speakerService.js"></script>
+  </head>
+
+  <body>
+    <ion-nav-view name="menu"></ion-nav-view>
+  </body>
+</html>

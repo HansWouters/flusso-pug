@@ -1,0 +1,19 @@
+<ion-view title="Settings">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="item item-divider">You</ion-item>
+      <ion-item class="item">
+        <label for="settings.user.name">Name</label>
+        <input id="settings.user.name" type="text" ng-model="SettingsCtrl.user.name" ng-change="SettingsCtrl.setUserName(SettingsCtrl.user.name)">
+      </ion-item>
+      <ion-item class="item item-divider">Application data</ion-item>
+      <ion-item class="item" ng-click=SettingsCtrl.reloadData()>
+        <span>Reload data</span>
+        <h5>Last reload: {{ SettingsCtrl.dataTimestamp | date:'dd-MM-yyyy H:mm' }}</h5>        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

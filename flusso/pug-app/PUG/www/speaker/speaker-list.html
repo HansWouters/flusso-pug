@@ -1,0 +1,25 @@
+<ion-view title="Speakers">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <div class="css-spinner" ng-hide="speakerListCtrl.list">
+      <ion-spinner/>
+    </div>
+    <ion-list>
+      <ion-item class="item item-divider" ng-repeat-start="index in speakerListCtrl.list" id="index_{{ index.letter }}">
+        {{index.letter}}
+      </ion-item>
+      <ion-item class="item css-list-item" ng-repeat="speaker in index.speakers" ui-sref="pug.speaker.details({ speakerId: speaker.speaker_id })">
+        <img data-ng-src="data:image/png;base64,{{speaker.photo}}"/>
+        <span>{{speaker.firstName}} {{speaker.middleName}} {{speaker.lastName}}</span>
+      </ion-item>
+      <div ng-repeat-end></div>
+    </ion-list>
+  </ion-content>
+  <ul class="css-index-selector" ng-show="speakerListCtrl.list">
+    <li ng-repeat="index in speakerListCtrl.list">
+      <a ng-click="gotoList('index_{{ index.letter }}')">{{ index.letter }}</a>
+    </li>
+  </ul>
+</ion-view>

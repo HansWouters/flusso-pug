@@ -1,0 +1,10 @@
+<ion-view view-title="PUG 2015">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content scroll="false" class="background-positive" ng-style="HomeCtrl.getScreenSize(true)">
+    <div class="css-centralize-background" ng-style="{'background-image': HomeCtrl.background}">
+      <span class="css-centralize" ng-bind-template="Welcome {{ HomeCtrl.username }}">Welcome Progress User!</span>
+    </div>
+  </ion-content>
+</ion-view>

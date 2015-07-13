@@ -1,0 +1,25 @@
+<ion-view title="Sessions">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="css-spinner" ng-hide="sessionListCtrl.list">
+      <ion-spinner/>
+    </div>
+    <ion-list>
+      <ion-item class="item" ng-repeat="session in sessionListCtrl.list" ng-click="sessionListCtrl.toggleDetails({{ session.sessie_id }})">
+        <span><strong>{{session.subject}}</strong></span>
+        <br>
+        <div class="css-block css-session-details" ng-show="sessionListCtrl.showDetails({{ session.sessie_id }})">
+          <span class="css-speaker">
+            <ion-item ui-sref="speaker.details({ speakerId: speaker.speaker_id })">          
+              {{ session.speaker.firstName }} {{ session.speaker.middleName }} {{ session.speaker.lastName }}
+            </ion-item>
+          </span>
+          <br>
+          <span>{{session.description}}</span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
