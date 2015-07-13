@@ -2,9 +2,9 @@
 
   angular
     .module('pug.services')
-    .factory('SettingService', ['DataService', '$q', SettingService ]);
+    .factory('SettingService', SettingService);
 
-  function SettingService(DataService, $q) {
+  function SettingService(DataService, $q, $log) {
     var settings;
     var update = initializeSettings();
     var service = {
@@ -13,13 +13,10 @@
     return service;
 
     function getBackground() {
-      console.log('Lets get some background');
       return $q(function(resolve, reject) {
         update.then(function() {
-          console.log('Got background');
           resolve(settings['BackgroundImage']);
         }, function() {
-          console.error('No background');
           reject('Could not get background');
         });
       });
@@ -28,18 +25,18 @@
     function initializeSettings() {
       return $q(function(resolve, reject) {
         if (!settings) {
-          console.log('Going to load settings');
+          $log.info('Going to load settings');
           var qSettings = DataService.get('Settings');
           qSettings.then(function(data) {
             settings = mapSettings(data);
             resolve('Settings updated');
           }, function(data) {
-            console.error('Failure');
-            console.error(data);
+            $log.error('Failure');
+            $log.error(data);
             reject('Failed to update settings')
           });
         } else {
-          console.log('Settings already set');
+          $log.info('Settings already set');
           resolve('Settings already set');
         }
       });
