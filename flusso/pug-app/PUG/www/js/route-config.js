@@ -98,6 +98,16 @@
       controller : 'SpeakerController as speakerCtrl'
     });
 
+    $stateProvider.state('pug.sponsor', {
+      url: 'sponsors',
+      views: {
+        defaultview: {
+          templateUrl: 'sponsor/sponsors.html',
+          controller: 'SponsorController as SponsorCtrl'
+        }
+      }
+    });
+
     $stateProvider.state('pug.settings', {
       url: 'settings',
       views: {

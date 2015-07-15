@@ -1,0 +1,23 @@
+<ion-view view-title="Sponsor">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content scrolling="false">
+    <ion-slide-box pager-click="SponsorCtrl.gotoIndex(index)" ng-style="SponsorCtrl.getScreenSize(true)">
+      <ion-slide ng-repeat="sponsor in SponsorCtrl.sponsors">
+        <div class="sponsor">
+          <div class="sponsor-header">
+            <h5 class="sponsor-level-{{ sponsor.sponsortype_type }}">{{ sponsor.sponsortype_type }}</h5>
+            <div class="logo">
+              <img data-ng-src="data:image/png;base64,{{ sponsor.company_logo }}"/>
+            </div>
+            <h3 class="sponsor-name">{{ sponsor.company_name }}</h3>
+          </div>
+          <ion-scroll class="sponsor-profile" zooming="false" direction="y" ng-style="{ height: SponsorCtrl.getScreenSize(233).height }">
+            {{ sponsor.company_profile }}
+          </ion-scroll>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

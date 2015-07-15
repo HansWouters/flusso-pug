@@ -1,0 +1,44 @@
+.sponsor-header {
+	text-align: center;
+	height: 150px;
+}
+
+.sponsor-header h5 {
+	padding: 4px;
+	margin-top: 0;
+}
+
+.sponsor-header .logo {
+	height: 70px;
+}
+
+.sponsor-header .logo img {
+	max-height: 70px;
+}
+
+.sponsor-header .sponsor-name {
+	margin-top: 0;
+}
+.sponsor-level-Main {
+	background-color: lavender;
+}
+
+.sponsor-level-Platinum {
+	background-color: cadetblue;
+}
+
+.sponsor-level-Gold {
+	background-color: gold;
+}
+
+.sponsor-level-Silver {
+	background-color: silver;
+}
+
+.sponsor-level-Bronze {
+	background-color: burlywood;
+}
+
+.sponsor-profile {
+	padding: 5px;
+}

@@ -15,6 +15,7 @@
       Settings : 'Setting',
       Sessions : 'Sessie',
       Speakers : 'Speaker',
+      Sponsors: 'Sponsor',
       SessionSpeakerLink: 'Sessie_speaker'
     };
     var service = {
@@ -26,7 +27,7 @@
 
     function get(fieldName) {
       if (!fields[fieldName]) {
-        console.error('Fieldname unknown', fieldName);
+        $log.error('Fieldname unknown', fieldName);
         return null;
       }
 
